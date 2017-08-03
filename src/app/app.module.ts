@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -10,6 +11,7 @@ import { ServicesComponent } from './services/services.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { SingleServiceComponent } from './single-service/single-service.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,18 @@ import { FooterComponent } from './footer/footer.component';
     ServicesComponent,
     PortfolioComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    SingleServiceComponent
   ],
   imports: [
     BrowserModule,
+    CarouselModule.forRoot(),
     RouterModule.forRoot([
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
       {
         path : 'home',
         component : HomeComponent
@@ -36,6 +45,10 @@ import { FooterComponent } from './footer/footer.component';
       {
         path : 'services',
         component : ServicesComponent
+      },
+      {
+        path : 'single-service',
+        component : SingleServiceComponent
       },
       {
         path : 'portfolio',
