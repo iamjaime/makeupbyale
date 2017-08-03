@@ -1,0 +1,80 @@
+<section class="section section-page-title">
+  <div class="overlay">
+    <h1>Get in Touch </h1>
+  </div>
+  <!--overlay-->
+</section>
+<section id="contact" class="section section-contact">
+  <!-- section-title -->
+  <div class="section-title text-center">
+    <h1 class="text-center">Get in Touch </h1>
+    <p class="intro max-500">If you have a question regarding my makeup services or would like to schedule a consultation, feel free to contact me using the form below.</p>
+  </div>
+  <!-- end section-title -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-4">
+        <div class="contact-detail"> <i class="fa fa-map-marker"></i>
+          <p> <strong>Location:</strong> <br/>
+            5896 BellFast Lane, Howard St. <br/>
+            Florida, USA 33002 </p>
+        </div>
+        <div class="contact-detail"> <i class="fa fa-phone"></i>
+          <p> <strong>Call me:</strong> <br/>
+            Phone: +01 234 567 8900 <br/>
+            Mobile: +(01) 987 654 3210 </p>
+        </div>
+        <div class="contact-detail"> <i class="fa fa-comments"></i>
+          <p> <strong>Email:</strong> <br/>
+            <a href="mailto:info@yourdomain.net">info@yourdomain.net</a> <br/>
+            <a href="mailto:info@yourdomain.net">customer@yourdomain.net</a> </p>
+        </div>
+      </div>
+      <!--col-6-->
+      <div class="col-lg-8 col-md-8">
+        <div class="alert alert-success alert-success-contact" role="alert" style="display:none">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+          Your message has been sent. We will contact you asap! </div>
+        <div class="alert alert-danger alert-danger-contact" role="alert" style="display:none">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+          Opps! There was problem sending email. Please try Again! </div>
+        <form class="contactform" id="contactform" action="email.php" method="post">
+          <div class="row">
+            <div class="col-md-6">
+              <p>
+                <input class="form-control" id="cname" name="cname" placeholder="your name" required="required" type="text">
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p>
+                <input class="form-control" id="cemailaddress" name="cemailaddress" placeholder="email address" required="required" type="email">
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p>
+                <input class="form-control" id="cphone" name="cphone" placeholder="phone no." required="required" type="tel">
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p>
+                <input class="form-control" id="subject" name="subject" placeholder="subject" type="text">
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <p>
+                <textarea class="form-control" id="cmessage" name="cmessage" rows="4" placeholder="Message" required="required"></textarea>
+              </p>
+              <div class="text-right">
+                <button class="btn btn-primary" id="submit-contact-form">Send Message <i class="fa fa-angle-double-right"></i> </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--col-8-->
+    </div>
+  </div>
+</section>
+<!--section-contact-->
