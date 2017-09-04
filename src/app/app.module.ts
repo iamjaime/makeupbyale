@@ -61,7 +61,7 @@ import { PortfolioService } from './portfolio.service';
         path : 'contact',
         component : ContactComponent
       }
-    ])
+    ], { useHash: true})
   ],
   providers: [PortfolioService],
   bootstrap: [AppComponent]
