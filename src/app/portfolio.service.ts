@@ -12,7 +12,7 @@ export class PortfolioService {
    * @returns {Observable<R>}
    */
   getPortfolio(){
-    return this.http.get('http://api.nycmakeupbyale.dev/api/portfolio').map((res) => res.json());
+    return this.http.get('http://api.nycmakeupbyale.com/api/portfolio').map((res) => res.json());
   }
 
 }

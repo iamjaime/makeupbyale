@@ -108,7 +108,7 @@
       <!--<li class=""><a href="" data-filter=".studio">Studio</a></li>-->
     <!--</ul>-->
     <div class="portfolio-items row">
-      <div *ngFor="let image of portfolioImages" [ngClass]="[image.box_size ? image.box_size == null : '', image.category]" class="portfolio-item item col-xs-12 col-sm-6 col-md-4">
+      <div *ngFor="let image of portfolioImages" [ngClass]="[image.box_size ? image.box_size == null : '', image.category]" class="portfolio-item col-xs-12 col-sm-6 col-md-4">
         <div class="a-img" [ngStyle]="{ 'background-image': 'url(' + image.url + ')'}"></div>
         <a href="{{ image.url }}" class="mfp-image"><i class="fa fa-search"></i></a>
       </div>

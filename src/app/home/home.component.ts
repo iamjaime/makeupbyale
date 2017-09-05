@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CarouselConfig } from 'ngx-bootstrap/carousel';
 import { PortfolioService } from '../portfolio.service';
 
-declare var jquery:any;
-declare var $ :any;
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -21,31 +18,6 @@ export class HomeComponent implements OnInit {
     this.getPortfolioImages();
   }
 
-  isotope() {
-    if (this.portfolioImages.length) {
-      console.log('hello from portfolio items');
-      var $container = $('.portfolio-items').isotope({
-        itemSelector: '.portfolio-item',
-        masonry: {
-          columnWidth: '.portfolio-item'
-        }
-      });
-      // filter items when filter link is clicked
-      $('.portfolio-filter a').on('click', function() {
-        var selector = $(this).attr('data-filter');
-        $container.isotope({
-          filter: selector
-        });
-        return false;
-      });
-
-      $('.portfolio-filter a').on('click', function() {
-        $('.portfolio-filter').find('.current').removeClass('current');
-        $(this).parent().addClass('current');
-      });
-    }
-  }
-
   /**
    * Handles Getting the Portfolio Images
    */
@@ -53,7 +25,6 @@ export class HomeComponent implements OnInit {
     this.portfolio.getPortfolio().subscribe((res) => {
       console.log(res);
       this.portfolioImages = res.data;
-      this.isotope();
     })
   }
 }
